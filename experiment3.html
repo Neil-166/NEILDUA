@@ -2,10 +2,23 @@
 <html>
 <head>
     <title>College Timetable - CSE Department</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 8px;
+        }
+        caption {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h2>College Timetable - CSE Department</h2>
-    <table border="1">
+    <table>
+        <caption>College Timetable - CSE Department</caption>
         <tr>
             <th>Day / Time</th>
             <th>9:00 - 10:00</th>
@@ -18,22 +31,24 @@
         </tr>
         <tr>
             <td>Monday</td>
-            <td>Mathematics</td>
+            <td rowspan="2">Mathematics</td>
             <td>English</td>
-            <td></td>
-            <td>Break</td>
+            <td rowspan="2">Physics</td>
+            <td rowspan="5">Break</td>
             <td>Computer Lab</td>
-            <td></td>
             <td>Sports</td>
+            <td rowspan="3">
+                <table>
+                    <tr><th colspan="2">Lab Details</th></tr>
+                    <tr><td>Batch A</td><td>DBMS Lab</td></tr>
+                    <tr><td>Batch B</td><td>OS Lab</td></tr>
+                </table>
+            </td>
         </tr>
         <tr>
             <td>Tuesday</td>
-            <td></td>
             <td>C Programming</td>
-            <td></td>
-            <td>Break</td>
             <td>Electronics Lab</td>
-            <td></td>
             <td>Library</td>
         </tr>
         <tr>
@@ -41,31 +56,13 @@
             <td>Mathematics</td>
             <td>English</td>
             <td>Physics</td>
-            <td>Break</td>
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td>Computer Networks</td>
-                    </tr>
-                    <tr>
-                        <td><b>Lab Details</b></td>
-                    </tr>
-                    <tr>
-                        <td>Batch A: DBMS Lab</td>
-                    </tr>
-                    <tr>
-                        <td>Batch B: OS Lab</td>
-                    </tr>
-                </table>
-            </td>
-            <td></td>
+            <td>Computer Networks</td>
+            <td colspan="2"></td>
         </tr>
         <tr>
             <td>Thursday</td>
             <td>Workshop</td>
-            <td></td>
-            <td>Physics</td>
-            <td>Break</td>
+            <td colspan="2">Physics</td>
             <td>Mathematics</td>
             <td>English</td>
             <td>Seminar</td>
@@ -75,12 +72,11 @@
             <td>Computer Networks</td>
             <td>English</td>
             <td>Physics</td>
-            <td>Break</td>
             <td>Project Work</td>
-            <td></td>
-            <td></td>
+            <td colspan="2"></td>
         </tr>
     </table>
+
     <h3>Outcome:</h3>
     <ul>
         <li>Successfully created a college timetable webpage using HTML tables.</li>
